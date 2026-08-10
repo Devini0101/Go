@@ -12,7 +12,6 @@
                             <th>Descrição</th>
                             <th>Preço</th>
                             <th>Quantidade</th>
-                            <th>Ação</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -22,6 +21,7 @@
                                 <td>{{.Description}}</td>
                                 <td>{{.Price}}</td>
                                 <td>{{.Amount}}</td>
+                                <td><a href="edit?id={{.Id}}" class="btn btn-info p-2">Atualizar</a></td>
                                 <td><button onclick="onDelete('{{.Id}}')" class="btn btn-danger p-2">Deletar</button></td>
                             </tr>
                         {{end}}

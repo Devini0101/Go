@@ -57,6 +57,32 @@ func CreateNewProduct(name string, description string, price float64, amount int
 	insertData.Exec(name, description, price, amount)
 }
 
+func SelectProductById(id string) Product {
+	db := db.Conn()
+	defer db.Close()
+
+	row := db.QueryRow("SELECT id, nome, descricao, preco, quantidade FROM public.produtos WHERE id = $1", id)
+
+	product := Product{}
+	err := row.Scan(&product.Id, &product.Name, &product.Description, &product.Price, &product.Amount)
+
+	if err != nil {
+		panic(err.Error())
+	}
+
+	return product
+}
+
+func Update(name string, description string, price float64, amount int, id string) {
+	db := db.Conn()
+	defer db.Close()
+	updateData, err := db.Prepare("UPDATE produtos SET nome = $1, descricao = $2, preco = $3, quantidade = $4 WHERE id = $5")
+	if err != nil {
+		panic(err.Error())
+	}
+	updateData.Exec(name, description, price, amount, id)
+}
+
 func Delete(id string) {
 	db := db.Conn()
 	defer db.Close()
