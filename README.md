@@ -38,13 +38,12 @@ To run or explore any of the projects in this repository:
 
  - Clone the repository:
 
--- bash code:
-git clone https://github.com/Devini0101/Go.git
+-- bash code: git clone https://github.com/Devini0101/Go.git
 
  - Navigate to the desired project folder:
 
-cd <project-folder-name>
+-- bash code: cd <project-folder-name>
 
 Run the application:
-go run main.go
+-- bash code: go run main.go
 -- if dont have the needed dependencies, like go on your environment, please download and set it up before trying it out
