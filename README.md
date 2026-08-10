@@ -1,0 +1,1 @@
+On this project, that will be a simple store CRUD, where you can create, read, update and delete data, and if you want to run it on your own machine, make sure to change the environment varibles (.env) where contains your database information to test it out.
