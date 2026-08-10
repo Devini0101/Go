@@ -42,7 +42,7 @@ To run or explore any of the projects in this repository:
 
  - Navigate to the desired project folder:
 
--- bash code: cd <project-folder-name>
+-- bash code: cd project-folder-name
 
 Run the application:
 -- bash code: go run main.go
