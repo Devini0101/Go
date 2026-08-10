@@ -1,0 +1,1 @@
+A project focused on monitoring websites disponibillity through a given time of timeout between checks and amount of checks, and write it into a log file (sites.txt)
